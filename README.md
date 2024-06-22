@@ -155,9 +155,9 @@ In Home view, all the views button will be available. User will land on specific
 - Info
 - Support
 
-## Overall Report View
+## Home View
 
-![Overall Report.gif](https://github.com/kirtianand19/Business-Insights-360/assets/138418920/57d761b9-0a3e-42bd-80ff-36745f505b5b)
+https://github.com/kirtianand19/Business-Insights-360/assets/138418920/57d761b9-0a3e-42bd-80ff-36745f505b5b
 
 ## Project Outcome
 
