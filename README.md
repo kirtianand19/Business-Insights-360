@@ -134,7 +134,7 @@ Understanding the available data is crucial before analysis. Here’s a summary:
 
 - Data modeling is crucial and forms the foundation of the report. All visuals are built upon the data model.
 - Poor data modeling affects the overall performance of the report.
-- Follow best practices for data modeling. Refer to this [Blog](https://addendanalytics.com/blog/data-modelling-best-practices/)for more information.
+- Follow best practices for data modeling. Refer to this [Blog](https://addendanalytics.com/blog/data-modelling-best-practices/) for more information.
 - This project follows the Snowflake data modeling method.
 
 ![Data Model](https://github.com/kirtianand19/Business-Insights-360/assets/138418920/b03f1d73-ad04-4abe-86ba-55838fe66d57)
