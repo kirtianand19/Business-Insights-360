@@ -157,7 +157,31 @@ In Home view, all the views button will be available. User will land on specific
 
 ## Home View
 
-https://github.com/kirtianand19/Business-Insights-360/assets/138418920/57d761b9-0a3e-42bd-80ff-36745f505b5b
+![Home View](https://github.com/kirtianand19/Business-Insights-360/assets/138418920/3c0e648e-0b7a-4a5d-9a77-3bfcf838a8e6)
+
+## Finance View
+
+![Finance View](https://github.com/kirtianand19/Business-Insights-360/assets/138418920/4b42e2a7-db31-48d5-a0d2-4d9720d37209)
+
+## Sales View
+
+![Sales View](https://github.com/kirtianand19/Business-Insights-360/assets/138418920/b03a5a8b-8744-44e9-bc19-e5b845651766)
+
+## Marketing View
+
+![Marketing View](https://github.com/kirtianand19/Business-Insights-360/assets/138418920/d39d87ec-67fc-4dc3-a481-efc14e77272b)
+
+## Executive View
+
+![Executive View](https://github.com/kirtianand19/Business-Insights-360/assets/138418920/162f57af-62d2-49be-8536-4c891d0220a2)
+
+## Info View
+
+![Infp View](https://github.com/kirtianand19/Business-Insights-360/assets/138418920/b742d8e2-1c36-42a5-ae08-188ebccacf88)
+
+## Support View
+
+![Support View](https://github.com/kirtianand19/Business-Insights-360/assets/138418920/b3e0911e-a0aa-434f-b691-179a702131d9)
 
 ## Project Outcome
 
