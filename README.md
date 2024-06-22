@@ -2,7 +2,9 @@
 
 ## Project Overview
 
-AtliQ Hardware, experiencing rapid growth, has embarked on implementing data analytics using Power BI to gain a competitive edge and drive data-driven decisions. This project aims to address stakeholder questions across finance, sales, marketing, and supply chain.
+AtliQ Hardware has been growing rapidly in recent years and has decided to implement data analytics using Power BI to surpass competitors and make data-driven decisions. This project aims to provide answers to stakeholder questions across finance, sales, marketing, and supply chain.
+
+I worked on this project by following the Codebasics Power BI Course. The link to the course is [here](https://codebasics.io/courses/power-bi-data-analysis-with-end-to-end-project).
 
 [Live Report Link](https://app.powerbi.com/view?r=eyJrIjoiZjMwNGQ4NzQtOGU1NS00YTM2LTg0ZGMtZGQ2NjBmYTU1OTNjIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9)
 
@@ -12,31 +14,51 @@ AtliQ Hardware, experiencing rapid growth, has embarked on implementing data ana
 - **Power BI Desktop**
 - **Excel**
 - **DAX Language**
-- **DAX Studio** (for optimization)
+- **DAX Studio** (for optimizing the report)
 - **Project Charter File**
 
 ## Power BI Techniques Learned
 
 - Key questions to ask before starting a project
-- Creating calculated columns and measures using DAX
+- Creating calculated columns
+- Creating measures using DAX language
 - Data modeling
-- Using Bookmarks and Page Navigation
-- Error prevention using the Divide function
-- Creating a date table using M language
-- Dynamic titles based on filters
-- KPI indicators and conditional formatting
+- Using bookmarks to switch between visuals
+- Page navigation with buttons
+- Using the divide function to prevent division by zero errors
+- Creating date tables using M language
+- Dynamic titles based on applied filters
+- Using KPI indicators
+- Conditional formatting with icons or background colors
 - Data validation techniques
-- Power BI Services: Publishing, auto-refresh setup, app creation, collaboration, and access permissions
+- Power BI services: publishing reports, setting up personal gateways for auto-refresh, app creation, collaboration, workspace, and access permissions
 
 ## Business Terms
 
-- Gross Price, Net Invoice Sale, Gross Margin, Net Sales, Net Profit
-- COGS (Cost of Goods Sold), YTD (Year to Date), YTG (Year to Go)
-- Sales Channels: Direct, Retailer, Distributor
+- **Gross Price**
+- **Pre-Invoice Deductions**
+- **Post-Invoice Deductions**
+- **Net Invoice Sale**
+- **Gross Margin**
+- **Net Sales**
+- **Net Profit**
+- **COGS (Cost of Goods Sold)**
+- **YTD (Year to Date)**
+- **YTG (Year to Go)**
+- **Direct**
+- **Retailer**
+- **Distributors**
+- **Consumer**
 
 ## Company Background
 
-AtliQ Hardware, a global seller of computer and accessories, operates through Retailers, Direct, and Distributors channels. Facing competition with data analytics, AtliQ aims to build an analytics team for better insights and decisions.
+AtliQ Hardware, a company that has grown significantly in recent years, operates globally and sells computers and accessories through three channels:
+
+- Retailers
+- Direct
+- Distributors
+
+The company recently faced a loss from opening a store in America based on surveys, intuition, and some Excel analysis. Competitors have analytics teams for data-driven decisions, prompting AtliQ to build its own analytics team for future insights and decisions.
 
 ### Key Questions Before Starting the Dashboard
 
@@ -44,39 +66,76 @@ AtliQ Hardware, a global seller of computer and accessories, operates through Re
 2. How will the success of this project be measured?
 3. What is the project timeline?
 4. Are stakeholders expecting a preview before the final release?
-5. What are stakeholders' hopes and fears regarding this project?
-6. Who will use this dashboard and for what purpose?
-7. What are the expectations at project completion?
-8. What potential issues might arise during the project?
-9. What resources and data are needed?
-10. Are there any design and view preferences from stakeholders?
+5. What are stakeholders' hopes for this project?
+6. What are stakeholders' fears regarding this dashboard?
+7. Who will use this dashboard and for what purpose?
+8. What are the expectations upon project completion?
+9. What potential issues might arise during the project?
+10. What resources and data are needed to build this dashboard?
+11. Are there any design and view preferences from stakeholders?
 
-## Dataset Overview
+After the project kickoff meetings, the data engineering team provided the requested data for analysis.
 
-### Dimension Tables
+### Dataset Overview
 
-- **dim_customer:** 27 markets, 75 customers, 2 platforms (Brick & Mortar, E-commerce), 3 channels (Retailer, Direct, Distributors)
-- **dim_market:** 27 markets, 7 sub-zones, 4 regions (APAC, EU, NA, LATAM)
-- **dim_product:** 3 divisions (P&A, PC, N&S), 14 categories
+Understanding the available data is crucial before analysis. Here’s a summary:
 
-### Fact Tables
+**Dimension Tables:** Contain static data like customer and product details.
 
-- **fact_forecast_monthly:** Forecast customer needs to enhance satisfaction and reduce storage costs
-- **fact_sales_monthly:** Monthly sales data
+**Fact Tables:** Contain transaction data.
 
-### Additional Tables
+#### gdb041:
 
-- **freight_cost:** Travel and other costs by market and fiscal year
-- **gross_price:** Gross prices by product code
-- **manufacturing_cost:** Manufacturing costs by product code and year
-- **pre_invoice_deductions, post_invoice_deductions:** Deduction details by customer and year
+- **dim_customer**
+  - 27 distinct markets (e.g., India, USA, Spain)
+  - 75 distinct customers across markets
+  - 2 types of platforms: Brick & Mortar (physical/offline) and E-commerce (online)
+  - 3 channels: Retailer, Direct, Distributors
+- **dim_market**
+  - 27 distinct markets
+  - 7 sub-zones
+  - 4 regions: APAC, EU, NA, LATAM
+- **dim_product**
+  - Divisions:
+    - P & A: Peripherals, Accessories
+    - PC: Notebook, Desktop
+    - N & S: Networking, Storage
+  - 14 different categories (e.g., Internal HDD, keyboard)
+  - Various product variants
 
-## Data Modeling
+#### Fact Tables:
 
-- Followed Snowflake schema for efficient data modeling. Refer to this [blog](https://addendanalytics.com/blog/data-modelling-best-practices/) for best practices.
+- **fact_forecast_monthly**
+  - Forecasts customer needs to enhance satisfaction and reduce storage costs
+  - Denormalized for analytical purposes
+  - Dates replaced by the start date of the month
+  - Contains forecast quantity at the end
+- **fact_sales_monthly**
+  - Similar to the forecast table but with sold quantities instead of forecast values
 
----
+#### gdb056:
 
+- **freight_cost**
+  - Travel and other costs for each market with fiscal year
+- **gross_price**
+  - Gross prices by product code
+- **manufacturing_cost**
+  - Manufacturing costs by product code and year
+- **pre_invoice_deductions**
+  - Pre-invoice deductions percentage by customer and year
+- **post_invoice_deductions**
+  - Post-invoice and other deductions details
+
+## Importing Data into Power BI
+
+- As the database is MySQL, import datasets from the MySQL database to Power BI using database access credentials.
+
+## Data Model
+
+- Data modeling is crucial and forms the foundation of the report. All visuals are built upon the data model.
+- Poor data modeling affects the overall performance of the report.
+- Follow best practices for data modeling. Refer to this [Blog](https://addendanalytics.com/blog/data-modelling-best-practices/)for more information.
+- This project follows the Snowflake data modeling method.
 
 ![Data Model](https://github.com/kirtianand19/Business-Insights-360/assets/138418920/b03f1d73-ad04-4abe-86ba-55838fe66d57)
 
