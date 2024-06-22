@@ -1,4 +1,3 @@
-```markdown
 # Business Insights 360
 
 ## Project Overview
@@ -78,8 +77,6 @@ AtliQ Hardware, a global seller of computer and accessories, operates through Re
 
 ---
 
-Check out the [Codebasics Power BI Course](https://codebasics.io/courses/power-bi-data-analysis-with-end-to-end-project) for more details on how this project was developed.
-```
 
 ![Data Model](https://github.com/kirtianand19/Business-Insights-360/assets/138418920/b03f1d73-ad04-4abe-86ba-55838fe66d57)
 
